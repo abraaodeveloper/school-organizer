@@ -15,16 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from s_organizer_api.views import UserViewSet
-from rest_framework import routers
+#from s_organizer_api.views import UserViewSet
+#from rest_framework import routers
 
-router = routers.DefaultRouter()
-router.register('users', UserViewSet)
+#router = routers.DefaultRouter()
+#router.register('users', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('s_organizer_website.urls')),
-    path('home', include(router.urls)),
+   # path('home', include(router.urls)),
     
     path('accounts/', include('django.contrib.auth.urls')),
 ]
