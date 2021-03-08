@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}School Organizer{% endblock %}
+
+{% block content %}
+<section class="content-banner">
+    <div class="banner">
+        <div class="card-login">
+            <h3>School organizer</h3>
+            <p>Simplifique a organizador das suas atividades escolares</p>
+            <form action="#" method="post">
+                <label for="#">Crie seu cadastro e aproveite!</label>
+                <input type="text" name="email" placeholder="meuemail@email.com">
+                <button type="submit">Criar cadastro</button>
+            </form>
+        </div>
+        <div class="banner-description">
+            <img id="img-description" src="{% static 'imgs/undraw_schedule_pnbk.svg' %}" alt="Imagem de uma moça lendo um livro">
+            <h4>Simplicidade!</h4>
+        </div>
+    </div>
+    <div class="content-icon-scroll">
+        <img id="icon-scroll" src="{% static 'imgs/arrow-bottom.svg' %}" alt="seta para baixo">
+    </div>
+</section>
+
+{% endblock %}

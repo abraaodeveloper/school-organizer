@@ -1,0 +1,92 @@
+.content-banner{
+    height  : 100vh;
+    position: relative;
+
+    background-image : url('../imgs/waves.svg');
+    background-repeat: no-repeat;
+    background-size  : 150%;
+
+    padding: 25vh 0 10vh 0;
+
+    .banner {  
+        display        : flex;
+        justify-content: space-around;
+    
+        .card-login{
+            width: 35%;
+            margin-top: 10vh;
+    
+            h3{
+                color: $constrast-light-color;
+            }
+    
+            p{
+                font-size: xx-large;
+                font-weight: 900;
+                color: $constrast-light-color;
+                margin-top: 1em;
+            }
+    
+            form{
+                margin-top: 10vh;
+    
+                label{
+                    font-size: larger;
+                    font-weight: 800;
+                    color: $primary-color;
+                }
+    
+                input{
+                    font-size: larger;
+                    padding: .3em;
+                    border-radius: .3em;
+                    border: 1px solid gray;
+                    margin-top: 20px;
+                }
+    
+                button{
+                    font-size: larger;
+                    padding: .3em;
+                    background-color: $primary-color;
+                    color: $constrast-light-color;
+                    border-radius: .3em;
+                    border: 0;
+                }
+            }
+        }
+    
+        .banner-description{
+            width: min-content;
+    
+            #img-description {
+                height: 50vh;
+            }
+    
+            h4 {
+                text-align : center;
+                color      : grey;
+                font-weight: 800;
+                font-size: larger;
+                margin     : 1em 0;
+                
+            }
+        }
+    }
+    
+    .content-icon-scroll{
+        width: 100%;
+        height: 20px;
+
+        display: flex;
+        justify-content: center;
+
+        #icon-scroll{
+            width: 30px;
+            height: 30px;
+
+            animation-name: bounce;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    }
+}

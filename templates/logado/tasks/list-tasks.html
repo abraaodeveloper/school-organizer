@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}School Organizer - list{% endblock %}
+
+{% block content %}
+{% for task in tasks %}
+<article>
+    <header>
+        <span><a href="/task/{{task.id}}">{{task.title}}</a></span>
+    </header>
+    <p>{{task.description}}</p>
+</article>
+{% endfor %}
+{% endblock %}
