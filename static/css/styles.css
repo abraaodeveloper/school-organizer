@@ -90,7 +90,6 @@ body {
 
 .content-banner {
   height: 100vh;
-  position: relative;
   background-image: url("../imgs/waves.svg");
   background-repeat: no-repeat;
   background-size: 150%;
@@ -103,6 +102,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  height: 95vh;
 }
 
 .content-banner .banner .card-login {
@@ -123,6 +123,13 @@ body {
 
 .content-banner .banner .card-login form {
   margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .content-banner .banner .card-login form label {

@@ -1,6 +1,5 @@
 .content-banner{
     height  : 100vh;
-    position: relative;
 
     background-image : url('../imgs/waves.svg');
     background-repeat: no-repeat;
@@ -11,6 +10,7 @@
     .banner {  
         display        : flex;
         justify-content: space-around;
+        height: 95vh;
     
         .card-login{
             width: 35%;
@@ -29,6 +29,8 @@
     
             form{
                 margin-top: 10vh;
+                display: flex;
+                flex-direction: column;
     
                 label{
                     font-size: larger;
