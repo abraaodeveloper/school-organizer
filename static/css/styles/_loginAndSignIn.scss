@@ -1,0 +1,76 @@
+.content-altentication {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+
+    .altentication-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100vh;
+
+        background-color: $primary-color;
+        padding: 5em;
+        width: 50%;
+
+        h2 {
+            color: $constrast-light-color;
+            margin-bottom: 3em;
+        }
+
+        ul > li {
+            font-size: small;
+            color: $danger-color;
+            margin: 1em;
+        }
+
+        form {
+            width: 40%;
+
+            p {
+                display: flex;
+                flex-direction: column;
+
+                h2 {
+                    margin: auto;
+                }
+
+                label {
+                    font-weight: 600;
+                    margin: 0.2em;
+                    color: #fff;
+                }
+
+                input {
+                    padding: 12px;
+                    margin-bottom: 2em;
+                    border-radius: 0.3em;
+                    border: 0;
+
+                    &:focus{
+                        border: 2px solid $primary-color-dark;
+                        padding: 10px;
+                    }
+                }
+            }
+
+            button {
+                display: grid;
+                background-color: $success-color;
+                margin-left: 1em 0em 1em 0em;
+                color: $constrast-light-color;
+                padding: 1em;
+                width: 100%;
+                border-radius: 0.3em;
+                border: 0;
+            }
+        }
+    }
+
+    #waves-altentication{
+        width: 60%;
+        padding: 50px;
+    }
+}

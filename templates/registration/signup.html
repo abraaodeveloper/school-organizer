@@ -1,10 +1,19 @@
-{% block title %}Register{% endblock %}
+{% extends 'base-not-navbar.html' %}
+{% block title %}Entrar{% endblock %}
+
+{% load static %}
 
 {% block content %}
-<h2>Sign up</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Sign Up</button>
-</form>
+
+<div class="content-altentication">
+  <span class="altentication-page">
+    <h2>Registro</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Registrar-se</button>
+    </form>
+  </span>
+  <img id="waves-altentication" src="{% static 'imgs/welcome.svg' %}" alt="mulher ao lado de uma porta.">
+</div>
 {% endblock %}

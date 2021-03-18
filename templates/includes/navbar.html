@@ -2,18 +2,20 @@
     <nav>
         <a href="#">Início</a>
         <ul>
+        {% if user.is_authenticated %}
             <li><a href="/taskslist">Tarefas</a></li>
             <li><a href="#">Diciplinas</a></li>
-            <li><a href="#">Semestres</a></li>          
+            <li><a href="#">Semestres</a></li> 
+        {% endif %}       
         </ul>
         <ul>
-            {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
             <li><a class="txt-user">Oi {{ user.username }}!</a></li>
             <li><a href="{% url 'logout' %}">Log Out</a></li>
-            {% else %}
+        {% else %}
             <li><a href="{% url 'login' %}">Entrar</a></li>
             <li id="btn-register"><a href="{% url 'signup' %}">Resgistrar-se</a></li> 
-            {% endif %}
+        {% endif %}
         </ul>
     </nav>
 </header>

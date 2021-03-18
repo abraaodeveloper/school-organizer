@@ -39,7 +39,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #07a0c3;
   width: 70%;
   margin: auto;
 }
@@ -103,6 +102,8 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   height: 95vh;
+  width: 70%;
+  margin: auto;
 }
 
 .content-banner .banner .card-login {
@@ -162,7 +163,7 @@ body {
 }
 
 .content-banner .banner .banner-description #img-description {
-  height: 50vh;
+  height: 40vh;
 }
 
 .content-banner .banner .banner-description h4 {
@@ -193,6 +194,102 @@ body {
           animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.content-altentication {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100vh;
+}
+
+.content-altentication .altentication-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 100vh;
+  background-color: #07a0c3;
+  padding: 5em;
+  width: 50%;
+}
+
+.content-altentication .altentication-page h2 {
+  color: #fff;
+  margin-bottom: 3em;
+}
+
+.content-altentication .altentication-page ul > li {
+  font-size: small;
+  color: #dd1c1a;
+  margin: 1em;
+}
+
+.content-altentication .altentication-page form {
+  width: 40%;
+}
+
+.content-altentication .altentication-page form p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content-altentication .altentication-page form p h2 {
+  margin: auto;
+}
+
+.content-altentication .altentication-page form p label {
+  font-weight: 600;
+  margin: 0.2em;
+  color: #fff;
+}
+
+.content-altentication .altentication-page form p input {
+  padding: 12px;
+  margin-bottom: 2em;
+  border-radius: 0.3em;
+  border: 0;
+}
+
+.content-altentication .altentication-page form p input:focus {
+  border: 2px solid #086788;
+  padding: 10px;
+}
+
+.content-altentication .altentication-page form button {
+  display: -ms-grid;
+  display: grid;
+  background-color: #88d498;
+  margin-left: 1em 0em 1em 0em;
+  color: #fff;
+  padding: 1em;
+  width: 100%;
+  border-radius: 0.3em;
+  border: 0;
+}
+
+.content-altentication #waves-altentication {
+  width: 60%;
+  padding: 50px;
 }
 
 footer {

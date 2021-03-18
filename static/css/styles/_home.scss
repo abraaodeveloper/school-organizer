@@ -11,6 +11,8 @@
         display        : flex;
         justify-content: space-around;
         height: 95vh;
+        width: 70%;
+        margin: auto;
     
         .card-login{
             width: 35%;
@@ -61,7 +63,7 @@
             width: min-content;
     
             #img-description {
-                height: 50vh;
+                height: 40vh;
             }
     
             h4 {
