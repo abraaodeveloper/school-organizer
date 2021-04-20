@@ -1,4 +1,22 @@
-.card-semester{
+.content-semesters {
+    width: 60%;
+    margin: 3em auto ;
 
-    
+    header{
+        @include displayFlexRow();
+        justify-content: space-between;
+
+        i{
+            font-size: xx-large;
+            color: $success-color;
+        }
+    }
+
+    .card{
+
+        .m-btn{
+            background-color: $success-color;
+            color: $constrast-light-color;
+        }
+    }
 }

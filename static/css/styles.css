@@ -9,6 +9,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+main {
+  height: 100vh;
+}
+
 .m-main-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,9 +24,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: relative;
   width: 100%;
-  z-index: 1;
+  background-color: #07a0c3;
 }
 
 .m-main-header nav {
@@ -39,8 +43,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  align-items: center;
   width: 70%;
-  margin: auto;
+  margin: 3em auto 0 auto;
 }
 
 .m-main-header nav ul {
@@ -55,7 +60,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
-  padding: 1em;
+  padding: .9em 0 0 0;
+  height: 2em;
 }
 
 .m-main-header nav ul li {
@@ -72,8 +78,12 @@ body {
   color: #07a0c3;
 }
 
+.m-main-header nav ul li:enabled {
+  border-bottom: 0.2em solid #fff;
+}
+
 .m-main-header nav #btn-register {
-  background-color: #88d498;
+  background-color: #35aa4e;
   margin-left: 1em;
 }
 
@@ -91,8 +101,8 @@ body {
   height: 100vh;
   background-image: url("../imgs/waves.svg");
   background-repeat: no-repeat;
-  background-size: 150%;
-  padding: 25vh 0 10vh 0;
+  background-size: 130%;
+  padding: 20vh 0 10vh 0;
 }
 
 .content-banner .banner {
@@ -108,7 +118,6 @@ body {
 
 .content-banner .banner .card-login {
   width: 35%;
-  margin-top: 5vh;
 }
 
 .content-banner .banner .card-login h3 {
@@ -196,6 +205,37 @@ body {
           animation-iteration-count: infinite;
 }
 
+.content-semesters {
+  width: 60%;
+  margin: 3em auto;
+}
+
+.content-semesters header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-semesters header i {
+  font-size: xx-large;
+  color: #35aa4e;
+}
+
+.content-semesters .card .m-btn {
+  background-color: #35aa4e;
+  color: #fff;
+}
+
 .content-altentication {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -278,7 +318,7 @@ body {
 .content-altentication .altentication-page form button {
   display: -ms-grid;
   display: grid;
-  background-color: #88d498;
+  background-color: #35aa4e;
   margin-left: 1em 0em 1em 0em;
   color: #fff;
   padding: 1em;

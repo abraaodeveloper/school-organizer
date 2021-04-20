@@ -1,20 +1,21 @@
 .m-main-header{
     @include displayFlexRow();
-    position: absolute;
+    position: relative;
     width: 100%;
-    z-index: 1;
+    background-color: $primary-color;
 
     nav{
         @include displayFlexRow();
         justify-content: space-between;
- 
+        align-items: center;
         width: 70%;
-        margin: auto;
+        margin: 3em auto 0 auto;
        
         ul{
             @include displayFlexRow();
             list-style: none;
-            padding: 1em;
+            padding: .9em 0 0 0;
+            height: 2em;
 
             li{
                 cursor: pointer;
@@ -25,7 +26,11 @@
                     background-color: $constrast-light-color;
 
                     a{ color: $primary-color; }
-                } 
+                }
+                
+                &:enabled{
+                    border-bottom: .2em solid $constrast-light-color;
+                }
             }
         }
 

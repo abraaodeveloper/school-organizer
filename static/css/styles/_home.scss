@@ -3,9 +3,9 @@
 
     background-image : url('../imgs/waves.svg');
     background-repeat: no-repeat;
-    background-size  : 150%;
+    background-size  : 130%;
 
-    padding: 25vh 0 10vh 0;
+    padding: 20vh 0 10vh 0;
 
     .banner {  
         display        : flex;
@@ -16,7 +16,7 @@
     
         .card-login{
             width: 35%;
-            margin-top: 5vh;
+         
     
             h3{
                 color: $constrast-light-color;
