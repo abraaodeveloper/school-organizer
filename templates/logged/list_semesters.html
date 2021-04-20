@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}School Organizer - list{% endblock %}
+
+{% block content %}
+{% for semester in semesters %}
+<article class="card-semester">
+    <header>
+        <span><a href="disciplines-list/{{semester.id}}">{{semester.title}}</a></span>
+    </header>
+    <p>{{semester.description}}</p>
+</article>
+{% endfor %}
+{% endblock %}
