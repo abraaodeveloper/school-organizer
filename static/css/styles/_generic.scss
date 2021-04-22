@@ -1,0 +1,27 @@
+#m-div-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(128, 128, 128, 0.514);
+
+    .card-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    p{
+        display: flex;
+        flex-direction: column;
+
+        textarea{
+            height: 200px;
+        }
+    }
+}

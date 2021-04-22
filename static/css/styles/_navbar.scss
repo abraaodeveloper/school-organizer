@@ -8,7 +8,7 @@
         @include displayFlexRow();
         justify-content: space-between;
         align-items: center;
-        width: 70%;
+        width: 60%;
         margin: 3em auto 0 auto;
        
         ul{
@@ -38,6 +38,11 @@
             background-color: $success-color;
             margin-left: 1em;
             a{ color: $constrast-light-color; }
+        }
+
+
+        h1{
+            font-size: x-large;
         }
 
         a{

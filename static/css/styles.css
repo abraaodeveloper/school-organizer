@@ -6,11 +6,34 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  width: 8px;
+  background: #add7e0;
+}
+
+.bkgr-greem {
+  color: #4daf62;
+}
+
+.bkgr-red {
+  color: #dd1c1a;
+}
+
+.m-btn-s {
+  background-color: #4daf62;
+  color: #fff;
 }
 
 .m-main-header {
@@ -44,7 +67,7 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 60%;
   margin: 3em auto 0 auto;
 }
 
@@ -83,12 +106,16 @@ main {
 }
 
 .m-main-header nav #btn-register {
-  background-color: #35aa4e;
+  background-color: #4daf62;
   margin-left: 1em;
 }
 
 .m-main-header nav #btn-register a {
   color: #fff;
+}
+
+.m-main-header nav h1 {
+  font-size: x-large;
 }
 
 .m-main-header nav a {
@@ -205,6 +232,52 @@ main {
           animation-iteration-count: infinite;
 }
 
+#m-div-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(128, 128, 128, 0.514);
+}
+
+#m-div-add .card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#m-div-add p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#m-div-add p textarea {
+  height: 200px;
+}
+
 .content-semesters {
   width: 60%;
   margin: 3em auto;
@@ -228,11 +301,85 @@ main {
 
 .content-semesters header i {
   font-size: xx-large;
-  color: #35aa4e;
+  color: #4daf62;
+}
+
+.content-semesters .card {
+  margin: 1em 0;
 }
 
 .content-semesters .card .m-btn {
-  background-color: #35aa4e;
+  background-color: #4daf62;
+  color: #fff;
+}
+
+.content-disciplines {
+  width: 55%;
+  margin: 3em auto;
+}
+
+.content-disciplines header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-disciplines header i {
+  font-size: xx-large;
+  color: #4daf62;
+}
+
+.content-disciplines .card {
+  margin: 1em 0;
+}
+
+.content-disciplines .card .m-btn {
+  background-color: #4daf62;
+  color: #fff;
+}
+
+.content-tasks {
+  width: 60%;
+  margin: 3em auto;
+}
+
+.content-tasks header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-tasks header i {
+  font-size: xx-large;
+  color: #4daf62;
+}
+
+.content-tasks .card {
+  margin: 1em 0;
+}
+
+.content-tasks .card .m-btn {
+  background-color: #4daf62;
   color: #fff;
 }
 
@@ -318,7 +465,7 @@ main {
 .content-altentication .altentication-page form button {
   display: -ms-grid;
   display: grid;
-  background-color: #35aa4e;
+  background-color: #4daf62;
   margin-left: 1em 0em 1em 0em;
   color: #fff;
   padding: 1em;

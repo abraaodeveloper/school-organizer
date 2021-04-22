@@ -1,21 +1,23 @@
 <header class="m-main-header">
     <nav>
-        <a href="/">Início</a>
+        <a href="/">
+            <h1>School Organizer</h1>
+        </a>
         <ul>
-        {% if user.is_authenticated %}
-            <li><a href="/tasks-list">Tarefas</a></li>
-            <li><a href="#">Diciplinas</a></li>
-            <li><a href="/semesters-list">Semestres</a></li> 
-        {% endif %}       
+            {% if user.is_authenticated %}
+            <li><a href="/semesters-list">Semestres</a></li>
+            <li><a href="/disciplines-list/0">Diciplinas</a></li>
+            <li><a href="/tasks-list/0">Tarefas</a></li>
+            {% endif %}
         </ul>
         <ul>
-        {% if user.is_authenticated %}
+            {% if user.is_authenticated %}
             <li><a class="txt-user">Oi {{ user.username }}!</a></li>
             <li><a href="{% url 'logout' %}">Log Out</a></li>
-        {% else %}
+            {% else %}
             <li><a href="{% url 'login' %}">Entrar</a></li>
-            <li id="btn-register"><a href="{% url 'signup' %}">Resgistrar-se</a></li> 
-        {% endif %}
+            <li id="btn-register"><a href="{% url 'signup' %}">Resgistrar-se</a></li>
+            {% endif %}
         </ul>
     </nav>
 </header>

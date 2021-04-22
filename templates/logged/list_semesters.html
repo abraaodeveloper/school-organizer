@@ -3,23 +3,39 @@
 {% block title %}School Organizer - list{% endblock %}
 
 {% block content %}
-<div class="content-semesters">
-<header>
-    <h2>Semestres</h2>
-    <i class="bi bi-plus-square-fill"></i>
-</header>
-
-{% for semester in semesters %}
-<div class="card">
+<div id="m-div-add">
+  <div class="card">
     <div class="card-header">
-        {{semester.title}}
+      <h3>Novo Semestre</h3>
+      <button type="button" class="btn-close" onclick="closeDivAdd()"></button>
     </div>
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn m-btn-s" type="submit">Adicionar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="content-semesters">
+  <header>
+    <h2>Semestres</h2>
+    <i class="bi bi-plus-square-fill" id="m-btn-add"></i></i>
+
+  </header>
+
+  {% for semester in semesters %}
+  <div class="card">
+    <div class="card-header">
+      {{semester.title}}
+    </div>
+    <div class="card-body">
       <p class="card-text">{{semester.description}}</p>
       <a href="/disciplines-list/{{semester.id}}" class="m-btn btn">Ver disciplinas</a>
     </div>
   </div>
-{% endfor %}
+  {% endfor %}
 </div>
 {% endblock %}

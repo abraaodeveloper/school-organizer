@@ -3,12 +3,34 @@
 {% block title %}School Organizer - list{% endblock %}
 
 {% block content %}
-{% for task in tasks %}
-<article>
-    <header>
-        <span><a href="/task/{{task.id}}">{{task.title}}</a></span>
-    </header>
-    <p>{{task.description}}</p>
-</article>
-{% endfor %}
+<div id="m-div-add">
+  <div class="card">
+    <div class="card-header">
+      <h3>Nova Tarefa</h3>
+      <button type="button" class="btn-close" onclick="closeDivAdd()"></button>
+    </div>
+    <div class="card-body">
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn m-btn-s" type="submit">Adicionar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="content-tasks">
+  <header>
+    <h2>Tarefas</h2>
+    <i class="bi bi-plus-square-fill" id="m-btn-add"></i>
+  </header>
+  {% for task in tasks %}
+  <div class="card text-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">{{task.title}}</div>
+    <div class="card-body">
+      <h5 class="card-title">Light card title</h5>
+      <p class="card-text">{{task.description}}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}

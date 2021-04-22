@@ -1,7 +1,33 @@
-body{
-    font-family: 'Roboto', sans-serif; 
+body {
+    font-family: "Roboto", sans-serif;
 }
 
-main{
-    height: 100vh;
+main {
+    //background-color: burlywood;
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    width: 8px;
+    background: #add7e0;
+}
+
+// efects
+.bkgr-greem {
+    color: $success-color;
+}
+
+.bkgr-red {
+    color: $danger-color;
+}
+
+.m-btn-s {
+    background-color: $success-color;
+    color: $constrast-light-color;
 }
