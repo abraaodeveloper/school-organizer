@@ -383,6 +383,71 @@ main {
   color: #fff;
 }
 
+/* This is based on the work of Joshua Saunders */
+.board-layout {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: max-content auto;
+      grid-template-rows: -webkit-max-content auto;
+      grid-template-rows: max-content auto;
+  grid-gap: 10px;
+  padding: 10px;
+  height: 800px;
+}
+
+.list-layout {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.board-text {
+  font-weight: bold;
+  font-size: 28px;
+  padding: 5px;
+}
+
+.board-lists {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 275px;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  height: 400px;
+}
+
+.board-list {
+  background-color: #ebecf0;
+  border-radius: 3px;
+  display: -ms-grid;
+  display: grid;
+  height: 80vh;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  grid-gap: 10px;
+  /* Chrome use a fixed height */
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 10px;
+}
+
+.list-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card {
+  background-color: white;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+          box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  padding: 10px;
+  cursor: pointer;
+}
+
 .content-altentication {
   display: -webkit-box;
   display: -ms-flexbox;

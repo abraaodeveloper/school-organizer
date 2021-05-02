@@ -37,8 +37,7 @@ def disciplineList(request, semester_id):
     form = DisciplineForm(request.POST or None)
     if request.method == 'POST':
         if form.is_valid():
-            form = DisciplineForm(request.POST)
-            form.instance.discipline = Semester.objects.get(semester=semester_id)
+            form.instance.semester = Semester.objects.get(id=semester_id)
             form.save()
 
     if semester_id == 0:
@@ -50,5 +49,14 @@ def disciplineList(request, semester_id):
 # Tasks
 @login_required
 def taskList(request, discipline_id):
-    tasks = Task.objects.all()
-    return render(request, 'logged/list_tasks.html', {'tasks': tasks})
+    form = TaskForm(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.instance.discipline = Discipline.objects.get(id=discipline_id)
+            form.save()
+    tasks = None
+    if discipline_id == 0:
+        tasks = Task.objects.all()
+    else:
+        tasks = Task.objects.filter(discipline=discipline_id)
+    return render(request, 'logged/list_tasks.html', {'tasks': tasks, 'form':form})

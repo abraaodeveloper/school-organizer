@@ -12,3 +12,9 @@ class DisciplineForm(forms.ModelForm):
     class Meta:
         model = Discipline
         fields = ["id", "title", "description"]
+
+class TaskForm(forms.ModelForm):
+
+    class Meta:
+        model = Task
+        fields = ["id", "title", "description", "delivery_at"]

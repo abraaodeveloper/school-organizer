@@ -23,14 +23,43 @@
     <h2>Tarefas</h2>
     <i class="bi bi-plus-square-fill" id="m-btn-add"></i>
   </header>
-  {% for task in tasks %}
-  <div class="card text-dark mb-3" style="max-width: 18rem;">
-    <div class="card-header">{{task.title}}</div>
-    <div class="card-body">
-      <h5 class="card-title">Light card title</h5>
-      <p class="card-text">{{task.description}}</p>
-    </div>
+
+</div>
+
+<div class="board-layout container">
+
+  <div class="left">
+      <div class="board-text">Today Board</div>
   </div>
-  {% endfor %}
+
+  <div id='boardlists' class="board-lists">
+      <div id='list1' class="board-list" ondrop="dropIt(event)" ondragover="allowDrop(event)">
+          <div class="list-title">
+              To Do
+          </div>
+
+          {% for task in tasks %}
+          <div class="card text-dark mb-3" id="{{task.id}}" style="max-width: 18rem;" draggable="true" ondragstart="dragStart(event)">
+            <div class="card-header">{{task.title}}</div>
+            <div class="card-body">
+              <h5 class="card-title">Light card title</h5>
+              <p class="card-text">{{task.description}}</p>
+            </div>
+          </div>
+          {% endfor %}
+
+      </div>
+      <div id='list2' class="board-list" ondrop="dropIt(event)" ondragover="allowDrop(event)">
+          <div class="list-title">
+              In Progress
+          </div>
+      </div>
+      <div id='list3' class="board-list" ondrop="dropIt(event)" ondragover="allowDrop(event)">
+          <div class="list-title">
+              Done
+          </div>
+
+      </div>
+  </div>
 </div>
 {% endblock %}
