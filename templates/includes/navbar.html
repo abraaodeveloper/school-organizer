@@ -5,9 +5,16 @@
         </a>
         <ul>
             {% if user.is_authenticated %}
+            {% if optionsmenu == 3 %}
             <li><a href="/semesters-list">Semestres</a></li>
             <li><a href="/disciplines-list/0">Diciplinas</a></li>
             <li><a href="/tasks-list/0">Tarefas</a></li>
+            {% elif optionsmenu == 2 %}
+            <li><a href="/semesters-list">Semestres</a></li>
+            <li><a href="/disciplines-list/0">Diciplinas</a></li>
+            {% elif optionsmenu == 1 %}
+            <li><a href="/semesters-list">Semestres</a></li>
+            {% endif %}
             {% endif %}
         </ul>
         <ul>

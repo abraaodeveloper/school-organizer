@@ -412,10 +412,11 @@ main {
 .board-lists {
   display: -ms-grid;
   display: grid;
-  grid-auto-columns: 275px;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
   grid-auto-flow: column;
   grid-gap: 10px;
-  height: 400px;
+  height: 100;
 }
 
 .board-list {
@@ -446,6 +447,10 @@ main {
           box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
   padding: 10px;
   cursor: pointer;
+}
+
+.card-header h3 {
+  font-size: medium;
 }
 
 .content-altentication {

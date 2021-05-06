@@ -35,7 +35,7 @@ class Task(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     discipline = models.ForeignKey(Discipline, on_delete=models.CASCADE)
     max_note = models.IntegerField()
-    mim_note = models.IntegerField()
+    min_note = models.IntegerField()
     delivery_at = models.DateTimeField()
 
     def __str__(self):
