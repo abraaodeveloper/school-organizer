@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %} Aproveitamento {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="d-flex flex-row m-2">
+        <div class="m-2" style="width: 32%;">
+            <div>
+                <h3>A fazer: {{todo.qtd}}</h3>
+                <button type="button" class="btn btn-outline-info" onclick="showMCard('m-card-1', 'btn1')" id="btn1">
+                    Ver tarefas</button>
+            </div>
+            <div id="m-card-1" style="display: none;">
+                {% for task in todo.list %}
+                <div class="card mt-2">
+                    <div class="card-header d-flex justify-content-between">
+                        <h3>{{task.delivery_at}}</h3>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{task.title}}</h5>
+                        <p class="card-text">{{task.description}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="m-2" style="width: 32%;">
+            <div class="">
+                <h3>Fazendo: {{doning.qtd}}</h3>
+            </div>
+            <button type="button" class="btn btn-outline-info" onclick="showMCard('m-card-2', 'btn2')" id="btn2">Ver
+                tarefas</button>
+            <div id="m-card-2" style="display: none;">
+                {% for task in doning.list %}
+                <div class="card mt-2">
+                    <div class="card-header d-flex justify-content-between">
+                        <h3>{{task.delivery_at}}</h3>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{task.title}}</h5>
+                        <p class="card-text">{{task.description}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="m-2" style="width: 32%;">
+            <div class="">
+                <h3>Terminado: {{done.qtd}}</h3>
+            </div>
+            <button type="button" class="btn btn-outline-info" onclick="showMCard('m-card-3', 'btn3')" id="btn3">Ver
+                tarefas</button>
+            <div id="m-card-3" style="display: none;">
+                {% for task in done.list %}
+                <div class="card mt-2">
+                    <div class="card-header d-flex justify-content-between">
+                        <h3>{{task.delivery_at}}</h3>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{task.title}}</h5>
+                        <p class="card-text">{{task.description}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -40,4 +40,12 @@ function closeDivAdd(){
 }
 
 
-//////////////////////////////////////
+function showMCard(id, idbtn){
+    if(document.getElementById(id).style.display == "none"){
+        document.getElementById(id).style.display = "block";
+        document.getElementById(idbtn).textContent = "Ocultar";
+    }else{
+        document.getElementById(id).style.display = "none";
+        document.getElementById(idbtn).textContent = "Ver tarefas";
+    }
+}

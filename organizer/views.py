@@ -16,6 +16,32 @@ def index(request):
     form = AuthenticationForm()
     context = {'form': form, "optionsmenu": 1}
     return render(request, 'guest/index.html', context)
+    
+@login_required
+def achievement(request):
+    user = request.user
+    semesters = user.semester_set.all()
+
+    done = []
+    doning = []
+    todo = []
+
+    for s in semesters:
+        disciplines = Discipline.objects.filter(semester=s.id)
+        for d in disciplines:
+            tasks = Task.objects.filter(discipline=d.id)
+    
+            for t in tasks:
+                if t.state == "done": done.append(t)
+                if t.state == "doning": doning.append(t)
+                if t.state == "todo": todo.append(t)
+
+    return render(request, 'logged/achievement.html', {
+        "qtdtasks": tasks.count(),
+        "done": {"list": done, "qtd": len(done)},
+        "doning": {"list": doning, "qtd": len(doning)},
+        "todo": {"list": todo, "qtd": len(todo)},
+        })
 
 # Semesters
 @login_required
@@ -44,7 +70,10 @@ def disciplineList(request, semester_id):
         disciplines = Discipline.objects.all()
     else:
         disciplines = Discipline.objects.filter(semester=semester_id)
-    return render(request, 'logged/list_disciplines.html', {'disciplines': disciplines, 'form':form, 'id': semester_id, "optionsmenu": 2})
+    return render(request, 'logged/list_disciplines.html', {
+        'disciplines': disciplines, 'form':form, 'id': semester_id, "optionsmenu": 2,
+        "idsemester": semester_id
+        })
 
 # Tasks
 @login_required
@@ -70,3 +99,19 @@ def taskAlter(request, discipline_id, task_id, state):
     task.save()
 
     return redirect('/tasks-list/'+str(task.discipline.id))
+
+@login_required
+def deletetask(request, discipline_id, task_id):
+
+    task = Task.objects.get(id = task_id)
+    task.delete()
+
+    return redirect('/tasks-list/'+str(task.discipline.id))
+
+@login_required
+def deletediscipline(request, discipline_id, semester_id):
+
+    discipline = Discipline.objects.get(id = discipline_id)
+    discipline.delete()
+
+    return redirect('/disciplines-list/'+str(semester_id)+'/')

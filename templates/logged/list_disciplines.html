@@ -27,8 +27,9 @@
 
   {% for discipline in disciplines %}
   <div class="card">
-    <div class="card-header">
-      {{discipline.title}}
+    <div class="card-header d-flex justify-content-between">
+      <h5>{{discipline.title}}</h5>
+      <a href="/deletediscipline/{{discipline.id}}/{{idsemester}}/"><i style="color: red;" class="bi bi-trash"></i></a>
     </div>
     <div class="card-body">
       <h5 class="card-title">Special title treatment</h5>

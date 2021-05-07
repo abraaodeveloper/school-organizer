@@ -1,11 +1,12 @@
 body {
     font-family: "Roboto", sans-serif;
+    min-height: 100vh;
 }
+
 
 main {
     //background-color: burlywood;
-    min-height: 100vh;
-}
+}   
 
 ::-webkit-scrollbar {
     width: 12px;
